@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fbb040; 
+
+
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#root{
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  flex-direction: column;
+}
+
+.game-container{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  background: #506f86; 
+  aspect-ratio: 1/1;
+  border-radius: 3em;
+  overflow: hidden;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.game{
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1/1;
+  gap: .3em;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.tile{
+  display: grid;
+  place-items: center;
+  border-radius:3em;
+  background-color: rgb(246, 246, 246);
+  transition: all 100ms ease-in-out;
+}
+
+.tile:hover{
+  background: #b2d8d8; 
+  opacity: 100%;
+}
+
+.o{
+  width: 50%;
+  aspect-ratio: 1/1;
+  border: 8px solid red;
+  border-radius: 5em;
+}
+
+.x{
+  position: relative;
+  width: 60%;
+  height: 15px;
+  background: rgb(2, 158, 2);
+  transform: rotate(45deg);
+}
+
+.x::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  
+  background: rgb(2, 158, 2);
+  transform: rotate(90deg);
+}
+
+.player{
+  font-size: clamp(.8rem,2.5vw,2.6rem);
+  text-align: center;
+}
+
+.show-win{
+  text-align: center;
+}
+button{
+  padding: 2em;
+}
+
+.play-again{
+  font-size: 1.5rem;
+  border: 1px solid #506f86; 
+  color: white;
+  border-radius:.7em;
+  background: #506f86; 
+  margin-top: 1em;
+  margin-inline: auto;
+  padding: .5em .8em;
+}
+
+.play-again:hover{
+ transform: scale(1.05);
+
+}
+
+.line{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fbb040; ;
+
+}
